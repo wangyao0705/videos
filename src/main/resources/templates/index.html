@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Hello</h1>
+	<section class="my-5">
+		<div class="container">
+		 <img th:src="${path}">
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<h2>Upload File Example</h2>
+					<p th:text="${message}" th:if="${message ne null}"
+						class="alert alert-primary"></p>
+					<form method="post" th:action="@{/upload}"
+						enctype="multipart/form-data">
+						<div class="form-group">
+							<input type="file" name="file" class="form-control-file">
+						</div>
+						<button type="submit" class="btn btn-primary">Upload File</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

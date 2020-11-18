@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Hello</h1>
+	<section class="my-5">
+		<div class="container">
+			<div>
+				<video width="320" height="240" controls="controls">
+					<source  th:src="${video}" type = "video/mp4">
+				</video>
+			</div>
+
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<h2>Upload Video File Example</h2>
+					<p th:text="${message}" th:if="${message ne null}"
+						class="alert alert-primary"></p>
+					<form method="post" th:action="@{/videoUpload}"
+						enctype="multipart/form-data">
+						<div class="form-group">
+							<input type="file" name="file" class="form-control-file">
+						</div>
+						<button type="submit" class="btn btn-primary">Upload File</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
