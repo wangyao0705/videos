@@ -18,7 +18,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class ImgUpLoadController {
-//相对路径name
+//相对路径names
 	@Value( "${imagesurl}")
 	private String UPLOAD_DIR;
 //action
