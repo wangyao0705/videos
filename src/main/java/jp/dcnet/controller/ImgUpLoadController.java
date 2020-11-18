@@ -23,7 +23,7 @@ public class ImgUpLoadController {
 	private String UPLOAD_DIR;
 //action
 	@PostMapping("/upload")
-	//获取本地地址
+	//获取本地地址bbbbb
     public String uploadFile(@RequestParam("file") MultipartFile file, RedirectAttributes attributes) {
 
         // check if file is empty
